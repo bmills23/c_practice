@@ -20,22 +20,39 @@ int main()
     {
         h = getInt("Height: ");
     }
-    while (h < 0 || h >= 8);
+    while (h < 0 && h <= 8);
+
+    // Declare amount of spaces and hashes to be printed
+    int spaces = h - 1;
+    int hashes = 0;
 
     for (int i = 0; i < h; i++)
     {
-        for (int j = 0; j < h; j++)
+        hashes++;
+
+        // Print spaces based on height
+        for (int j = 0; j < spaces; j++)
         {
-            for (int k = 0; k < h; k++)
-            {
-                strcpy(str. ' ');
-            }
-            int spaces = h--;
+            printf(" ");
+        }
+
+        for (int j = 0; j < hashes; j++)
+        {
             printf("#");
         }
-        printf("\n");
-    }
 
+        // Print gap
+        printf("  ");
+
+        for (int j = 0; j < hashes; j++)
+        {
+            printf("#");
+        }
+
+        spaces--;
+        printf("\n");
+
+    }
     return 0;
 }
 
