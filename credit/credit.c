@@ -19,7 +19,6 @@ int main()
     // Track initial product for even digits
     int prod1 = 0;
 
-
     /*
         Track secondary product for odd digits;
         Because of the way the digits are tracked,
@@ -74,21 +73,16 @@ int main()
 
         } else {
             prod2+=(n%10);
-            printf("%d\n", prod2);
         }
 
         length++;
     }
-
-    printf("Length is %d\n", length);
 
     if (length < 13 || length > 16)
     {
         printf("INVALID LENGTH\n");
         return 0;
     }
-
-    printf("Prod 1 = %d\nProd 2 = %d\n", prod1, prod2);
 
     final = prod1 + prod2;
 
@@ -101,26 +95,22 @@ int main()
     if ((length == 13 && l1 == 4) || (length == 16 && l1 == 4))
     {
         printf("VISA\n");
+        return 0;
     }
 
     if ((length == 16 && (l2 == 51 || l2 == 52 || l2 == 53 || l2 == 54 || l2 == 55)))
     {
         printf("MASTERCARD\n");
+        return 0;
     }
 
     if ((length == 15 && (l2 == 34 || l2 == 37)))
     {
         printf("AMEX\n");
+        return 0;
     }
 
-    printf("Your card is %ld\n", num);
-
-    printf("Primary product of digits is %d\n", prod1);
-
-    printf("Secondary product of digits is %d\n", prod2);
-
-    printf("Your leading digits are %d and %d\n", l1, l2);
-
+    printf("INVALID\n");
     return 0;
 }
 
